@@ -1,2 +1,2 @@
 # random-quote-generator
- generated quotes randomly
+ generates quotes randomly
