@@ -61,7 +61,7 @@ const quotes = [
  * This Function will randomly access an object from the quotes array
 ***/
 
-function getRandomQuote(){
+getRandomQuote=()=>{
   const randomIndex = Math.floor(Math.random()*quotes.length)
 
   const randomQuote = quotes[randomIndex]
@@ -72,7 +72,7 @@ function getRandomQuote(){
 
 
 }
-getRandomQuote()
+
 
 // console.log(getRandomQuote().source)
 
@@ -82,14 +82,12 @@ getRandomQuote()
  * two if statements check if the citation and year is present in the object.
 ***/
 
-function printQuote(){
-  let html =`
-
-  <p class = "quote"> ${getRandomQuote().quote}</p> 
-  <p class= "source"> ${getRandomQuote().source} 
-  `
-  if(getRandomQuote().citation){html += `<span class = "citation">${getRandomQuote().citation}</span></p>`}
-  if(getRandomQuote().year){html += `<span class = "year">${getRandomQuote().year}</span> </p>`}
+function printQuote (){
+  randomQuote = getRandomQuote()
+  let html =`<p class = "quote"> ${randomQuote.quote}</p> 
+  <p class= "source"> ${randomQuote.source}`
+  if(randomQuote.citation){html += `<span class = "citation">${randomQuote.citation}</span></p>`}
+  if(randomQuote.year){html += `<span class = "year">${randomQuote.year}</span></p>`}
 
   return document.getElementById('quote-box').innerHTML= html
   
