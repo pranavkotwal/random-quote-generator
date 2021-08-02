@@ -79,7 +79,7 @@ getRandomQuote=()=>{
 ***/
 
 function printQuote (){
-  randomQuote = getRandomQuote()
+  const randomQuote = getRandomQuote()
   let html =`<p class = "quote"> ${randomQuote.quote}</p> 
   <p class= "source"> ${randomQuote.source}`
   if(randomQuote.citation){html += `<span class = "citation">${randomQuote.citation}</span></p>`}
